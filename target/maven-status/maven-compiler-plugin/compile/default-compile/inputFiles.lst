@@ -3,6 +3,7 @@
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/config/WebConfig.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/controller/CategoryController.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/controller/ProductController.java
+/Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/exception/DuplicateCategoryException.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/exception/GlobalExceptionHandler.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/exception/ProductNotFoundException.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/model/Category.java

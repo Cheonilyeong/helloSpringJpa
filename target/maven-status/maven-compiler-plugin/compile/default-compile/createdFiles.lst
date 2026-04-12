@@ -9,6 +9,7 @@ kr/ac/hansung/cse/config/DbConfig.class
 kr/ac/hansung/cse/model/Tag.class
 kr/ac/hansung/cse/exception/ProductNotFoundException.class
 kr/ac/hansung/cse/repository/ProductRepository.class
+kr/ac/hansung/cse/exception/DuplicateCategoryException.class
 kr/ac/hansung/cse/controller/ProductController.class
 kr/ac/hansung/cse/model/ProductDetail.class
 kr/ac/hansung/cse/model/CategoryForm.class
