@@ -2,6 +2,7 @@ package kr.ac.hansung.cse.controller;
 
 import jakarta.validation.Valid;
 import kr.ac.hansung.cse.exception.DuplicateCategoryException;
+import kr.ac.hansung.cse.exception.ProductNotFoundException;
 import kr.ac.hansung.cse.model.Category;
 import kr.ac.hansung.cse.model.CategoryForm;
 import kr.ac.hansung.cse.model.Product;
@@ -10,10 +11,7 @@ import kr.ac.hansung.cse.service.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -39,7 +37,7 @@ public class CategoryController {
     }
 
     // ─────────────────────────────────────────────────────────────────
-    // GET /categories/create - 카테고리 등록 표시
+    // GET /category/create - 카테고리 등록 표시
     // ─────────────────────────────────────────────────────────────────
     @GetMapping("/create")
     public String showCreateForm(Model model) {
@@ -48,7 +46,7 @@ public class CategoryController {
     }
 
     // ─────────────────────────────────────────────────────────────────
-    // POST /categories/create - 카테고리 등록
+    // POST /category/create - 카테고리 등록
     // ─────────────────────────────────────────────────────────────────
     @PostMapping("/create")
     public String createCategory(@Valid @ModelAttribute("categoryForm") CategoryForm categoryForm,
@@ -67,5 +65,19 @@ public class CategoryController {
             return "categoryForm";
         }
         return "redirect:/category";
+    }
+
+    // ─────────────────────────────────────────────────────────────────
+    // POST /category/{id}/create - 카테고리 등록
+    // ─────────────────────────────────────────────────────────────────
+    @PostMapping("/{id}/delete")
+    public String deleteCategory(@PathVariable Long id,
+                                RedirectAttributes redirectAttributes) {
+        try {
+            categoryService.deleteCategory(id);
+            redirectAttributes.addFlashAttribute("successMessage", "삭제 완료");
+        } catch (IllegalStateException e) {
+            redirectAttributes.addFlashAttribute("errorMessage", e.getMessage());
+        }  return "redirect:/category";
     }
 }
