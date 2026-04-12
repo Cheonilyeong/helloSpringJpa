@@ -8,6 +8,7 @@
         페이지 제목에 상품명을 동적으로 포함합니다.
         ||문자열 리터럴 치환|| (Literal Substitution): 문자열 연결의 간편한 표현
     -->
+    <p th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 (E) a hh:mm:ss') + '  |  학번: 2071178  |  성명: 천일영'}"></p>
     <title th:text="|상품 상세 - ${product.name}|">상품 상세</title>
     <style>
         body { font-family: 'Malgun Gothic', Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }

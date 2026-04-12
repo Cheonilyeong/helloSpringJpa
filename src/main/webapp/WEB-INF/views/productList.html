@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <p th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 (E) a hh:mm:ss') + '  |  학번: 2071178  |  성명: 천일영'}"></p>
     <title>상품 목록 - Product Management</title>
     <style>
         /* 학습에 집중하기 위한 간단한 인라인 스타일 */
