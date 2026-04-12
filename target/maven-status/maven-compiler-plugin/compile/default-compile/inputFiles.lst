@@ -1,6 +1,7 @@
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/config/DbConfig.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/config/WebAppInitializer.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/config/WebConfig.java
+/Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/controller/CategoryController.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/controller/ProductController.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/exception/GlobalExceptionHandler.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/exception/ProductNotFoundException.java
@@ -12,4 +13,5 @@
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/repository/CategoryRepository.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/repository/ProductRepository.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/repository/TagRepository.java
+/Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/service/CategoryService.java
 /Users/ds/Desktop/helloSpringJpa/src/main/java/kr/ac/hansung/cse/service/ProductService.java
