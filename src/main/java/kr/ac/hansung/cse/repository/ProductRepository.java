@@ -131,4 +131,30 @@ public class ProductRepository {
             entityManager.remove(product);
         }
     }
+
+    public List<Product> findByNameContainingAndCategoryId(String keyword, Long categoryId) {
+        return entityManager.createQuery(
+                        "SELECT p FROM Product p LEFT JOIN FETCH p.category " +
+                                "WHERE p.name LIKE :keyword AND p.category.id = :cid",
+                        Product.class)
+                .setParameter("keyword", "%" + keyword + "%")
+                .setParameter("cid", categoryId)
+                .getResultList();
+    }
+
+    public List<Product> findByNameContaining(String keyword) {
+        return entityManager.createQuery(
+                        "SELECT p FROM Product p LEFT JOIN FETCH p.category WHERE p.name LIKE :keyword",
+                        Product.class)
+                .setParameter("keyword", "%" + keyword + "%")
+                .getResultList();
+    }
+
+    public List<Product> findByCategoryId(Long categoryId) {
+        return entityManager.createQuery(
+                        "SELECT p FROM Product p LEFT JOIN FETCH p.category WHERE p.category.id = :cid",
+                        Product.class)
+                .setParameter("cid", categoryId)
+                .getResultList();
+    }
 }
